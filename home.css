@@ -1,0 +1,55 @@
+/* BEGIN ALL-PAGE CSS */
+
+body {
+    background-color: #bac1b8;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'geometosregular';
+    src: url('fonts/geometos/geometos.eot');
+    src: url('fonts/geometos/geometos.svg#geometosregular') format('svg'),
+         url('fonts/geometos/geometos.ttf') format('ttf'),
+         url('fonts/geometos/geometos.woff') format('woff');
+}
+
+.nav {
+    background-color: #2b303a;
+    border-bottom: 2px solid #005377;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    padding: 40px 24px;
+}
+
+.nav .links {
+    float: right;
+}
+
+.nav a {
+    color: #ffffff;
+    display: block;
+    float: left;
+    font-family: 'geometosregular', Arial, sans-serif;
+    font-size: 28px;
+    margin-right: 12px;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: #005377;
+    color: #ffffff;
+}
+
+/*@media screen and (max-width: 950px) {
+    .nav a {
+        font-size: 14px;
+        margin-right: 6px;
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+/*  END ALL-PAGE CSS  */
