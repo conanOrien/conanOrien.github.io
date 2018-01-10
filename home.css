@@ -18,14 +18,14 @@ body {
     border-bottom: 0.13vw solid #005377;
     box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
     overflow: hidden;
-    padding: 1.75vw 2.25vw;
+    padding: 1.5vw 1.75vw;
 }
 
 .nav img {
     width: 16vw;
 }
 
-.nav .links {
+.links {
     float: right;
     margin-top: 1.5vw;
 }
@@ -35,16 +35,59 @@ body {
     display: block;
     float: left;
     font-family: 'geometosregular', Arial, sans-serif;
-    font-size: 1.85vw;
+    font-size: 1.8vw;
     line-height: auto;
-    margin-left: 1vw;
-    margin-right: 2vw;
-    padding: 0.35vw 1.15vw;
+    margin-left: 0.8vw;
+    margin-right: 1.6vw;
+    padding: 0.35vw 1.5vw;
     text-align: center;
     text-decoration: none;
 }
 
-.nav a:hover {
+/*.nav a:hover, .drop:hover, .drop_div {
     background-color: #005377;
     color: #ffffff;
+}*/
+
+.drop {
+    float: left;
+    overflow: hidden;
 }
+
+.drop .drop_div {
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'geometosregular', Arial, sans-serif;
+    font-size: 1.8vw;
+    outline: none;
+    padding: 0.35vw 1.5vw;
+    background-color: inherit;
+}
+
+.drop_links {
+    background-color: #2b303a;
+    box-shadow: 0 0.13vw 0.65vw 0 rgba(0, 0, 0, 0.35);
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.drop_links a {
+    color: #ffffff;
+    display: block;
+    float: none;
+    margin: 0.5vw 0vw 0.3vw 0vw;
+    text-align: left;
+    text-decoration: none;
+}
+
+/*.drop_links a:hover {
+    background-color: #005377;
+}*/
+
+.show {
+    display: block;
+}
+
+/* END ALL-PAGE CSS */
