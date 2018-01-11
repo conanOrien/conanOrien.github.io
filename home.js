@@ -1,34 +1,40 @@
 // BEGIN ALL-PAGE JS //
 
-navtabon = false;
+var navtab_active = null;
+var anchor_queued = null;
 
-function navtabshow(nt) {
-    if (!navtabon) {
-        $(nt).show("slide", {direction: "left"}, 750);
-        $(nt + " a").hide().delay(150).fadeIn(600);
-        navtabon = true;
-    };
+function navtab_id(e) {
+    var anchor_id = e.toString();
+    anchor_queued = anchor_id.replace("a_", "#nt_");
 };
 
-/*function navtabswitch(nt_before, nt_after)*/
+function reveal(nt) {
+    $(nt + " a").hide().delay(150).fadeIn(600);
+    $(nt).slideDown(750, function() {
+        navtab_active = nt;
+        anchor_queued = null;
+    });
+};
 
-function navtabhide(nt) {
-    if (navtabon) {
-        $(nt).hide("slide", {direction: "left"}, 750);
-        $(nt + " a").show().fadeOut(600);
-        navtabon = false;
-    };
+function hide(nt) {
+    $(nt + " a").show().fadeOut(600);
+    $(nt).slideUp(750, function() {
+        navtab_active = null;
+    });   
 };
 
 $(document).ready(function () {
     $("html").click(function(e) {
-        if (navtabon && e.target.nodeName != "A") {
-            navtabhide("#nt_shows");
+        if (navtab_active == null) {
+            reveal(anchor_queued);
+        } else if (anchor_queued == null && e.target.nodeName != "A") {
+            hide(navtab_active);
+        } else if (anchor_queued != null && anchor_queued != navtab_active) {
+            hide(navtab_active);
+            reveal(anchor_queued);
+        } else {
+            anchor_queued = null;
         };
-    });
-    
-    $("#a_shows").click(function() {
-        navtabshow("#nt_shows");
     });
 });
 
