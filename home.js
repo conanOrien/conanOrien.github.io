@@ -1,24 +1,34 @@
 // BEGIN ALL-PAGE JS //
 
-shows_on = false;
+navtabon = false;
+
+function navtabshow(nt) {
+    if (!navtabon) {
+        $(nt).show("slide", {direction: "left"}, 750);
+        $(nt + " a").hide().delay(150).fadeIn(600);
+        navtabon = true;
+    };
+};
+
+/*function navtabswitch(nt_before, nt_after)*/
+
+function navtabhide(nt) {
+    if (navtabon) {
+        $(nt).hide("slide", {direction: "left"}, 750);
+        $(nt + " a").show().fadeOut(600);
+        navtabon = false;
+    };
+};
 
 $(document).ready(function () {
     $("html").click(function(e) {
-        if (shows_on && e.target.nodeName != "A") {
-            $("#dl_shows").slideUp(function() {
-                $("#dl_shows").removeClass("show");
-                shows_on = false
-            });
+        if (navtabon && e.target.nodeName != "A") {
+            navtabhide("#nt_shows");
         };
     });
-
-    $("#dd_shows").click(function() {
-        if (!shows_on) {
-            $("#dl_shows").slideDown(function() {
-                $("#dl_shows").addClass("show");
-                shows_on = true
-            });
-        }
+    
+    $("#a_shows").click(function() {
+        navtabshow("#nt_shows");
     });
 });
 

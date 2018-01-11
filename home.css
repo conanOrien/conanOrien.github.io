@@ -17,17 +17,18 @@ body {
     background-color: #2b303a;
     border-bottom: 0.13vw solid #005377;
     box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
+    height: 5.3vw;
     overflow: hidden;
     padding: 1.5vw 1.75vw;
 }
 
 .nav img {
-    width: 16vw;
+    width: 15vw;
 }
 
 .links {
     float: right;
-    margin-top: 1.5vw;
+    margin-top: 0.9vw;
 }
 
 .nav a {
@@ -35,59 +36,68 @@ body {
     display: block;
     float: left;
     font-family: 'geometosregular', Arial, sans-serif;
-    font-size: 1.8vw;
+    font-size: 2.1vw;
     line-height: auto;
     margin-left: 0.8vw;
     margin-right: 1.6vw;
-    padding: 0.35vw 1.5vw;
+    padding: 0.6vw 1.5vw;
     text-align: center;
     text-decoration: none;
 }
 
-/*.nav a:hover, .drop:hover, .drop_div {
+.nav a:hover {
     background-color: #005377;
-    color: #ffffff;
+}
+
+/*.subnav {
+    background-color: #06a77d;
+    box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
+    display: none;
+    height: 2.6vw;
+    overflow: hidden;
+    padding: 0.5vw 1.75vw;
 }*/
 
-.drop {
-    float: left;
-    overflow: hidden;
-}
-
-.drop .drop_div {
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-family: 'geometosregular', Arial, sans-serif;
-    font-size: 1.8vw;
-    outline: none;
-    padding: 0.35vw 1.5vw;
-    background-color: inherit;
-}
-
-.drop_links {
-    background-color: #2b303a;
-    box-shadow: 0 0.13vw 0.65vw 0 rgba(0, 0, 0, 0.35);
+.navtab {
+    background-color: #06a77d;
+    box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
     display: none;
-    position: absolute;
-    z-index: 1;
+    height: 2.6vw;
+    overflow: hidden;
+    padding: 0.5vw 1.75vw;
 }
 
-.drop_links a {
+.navtab span {
+    color: #ffffff25;
+    display: block;
+    float: left;
+    font-family: 'geometosregular', Arial, sans-serif;
+    font-size: 6vw;
+    margin: -2.1vw 0 0 -0.3vw;
+    text-decoration: none;
+    user-select: none;
+}
+
+.sublinks {
+    float: right;
+}
+
+.sublinks a {
     color: #ffffff;
     display: block;
-    float: none;
-    margin: 0.5vw 0vw 0.3vw 0vw;
-    text-align: left;
+    float: left;
+    font-family: 'geometosregular', Arial, sans-serif;
+    font-size: 1.8vw;
+    line-height: auto;
+    margin-left: 0.6vw;
+    margin-right: 1.4vw;
+    padding: 0.3vw 1.5vw;
+    text-align: center;
     text-decoration: none;
 }
 
-/*.drop_links a:hover {
-    background-color: #005377;
-}*/
-
-.show {
-    display: block;
+.subnav a:hover {
+    background-color: #ffffff50;
 }
 
 /* END ALL-PAGE CSS */
