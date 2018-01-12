@@ -30,7 +30,7 @@ body {
 
 .links {
     float: right;
-    margin-top: 0.9vw;
+    margin-top: 0.85vw;
 }
 
 .nav a {
@@ -38,11 +38,11 @@ body {
     display: block;
     float: left;
     font-family: 'geometosregular', Arial, sans-serif;
-    font-size: 2.1vw;
+    font-size: 2vw;
     line-height: auto;
-    margin-left: 0.8vw;
-    margin-right: 1.6vw;
-    padding: 0.6vw 1.5vw;
+    margin-left: 0.6vw;
+    margin-right: 1.2vw;
+    padding: 0.7vw 1vw;
     text-align: center;
     text-decoration: none;
 }
@@ -66,9 +66,9 @@ body {
     background-color: #06a77d;
     box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
     display: none;
-    height: 2.6vw;
+    height: 2.5vw;
     overflow: hidden;
-    padding: 0.5vw 1.75vw;
+    padding: 0.4vw 1.75vw;
     position: relative;
     z-index: 1;
 }
@@ -79,7 +79,7 @@ body {
     float: left;
     font-family: 'geometosregular', Arial, sans-serif;
     font-size: 6vw;
-    margin: -2vw 0 0 -0.3vw;
+    margin: -1.95vw 0 0 -0.3vw;
     text-decoration: none;
     user-select: none;
 }
@@ -93,11 +93,11 @@ body {
     display: block;
     float: left;
     font-family: 'geometosregular', Arial, sans-serif;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
     line-height: auto;
     margin-left: 0.6vw;
     margin-right: 1.4vw;
-    padding: 0.3vw 1.5vw;
+    padding: 0.3vw 1vw;
     text-align: center;
     text-decoration: none;
 }
