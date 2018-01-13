@@ -41,7 +41,7 @@ body {
     margin-top: 0.85vw;
 }
 
-.nav a {
+.links a {
     border-radius: 0.6vw;
     color: #ffffff;
     display: block;
@@ -54,13 +54,12 @@ body {
     padding: 0.7vw 1vw;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }
 
-.nav a:hover {
+.links a:hover {
     background-color: #005377;
     border-radius: 0.6vw;
-    transition: background-color 0.5s ease;
 }
 
 .navtab {
@@ -102,13 +101,12 @@ body {
     padding: 0.3vw 1vw;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }
 
-.subnav a:hover {
+.sublinks a:hover {
     background-color: #ffffff50;
     border-radius: 0.6vw;
-    transition: background-color 0.5s ease;
 }
 
 .footer {
@@ -131,28 +129,44 @@ body {
 
 #f_left {
     float: left;
-    margin-top: -0.8vw;
+    margin: -1.4vw -0.6vw 0;
+    padding: 0.6vw 0.6vw;
 }
 
 #f_left img {
+    filter: grayscale(100%);
     opacity: 0.46;
+    transition: all 0.3s ease, width 1ms;
     width: 4vw;
 }
 
+#f_left img:hover {
+    filter: grayscale(0%);
+    opacity: 0.8;
+}
+
 #f_center {
-    margin-left: 5vw;
+    margin-left: 5.3vw;
     display: inline-block;
-    margin-top: 0.6vw;
+    margin-top: 0.7vw;
 }
 
 #f_right {
     font-size: 1.8vw;
     float: right;
-    margin-top: 0.3vw;
+    margin-top: -0.1vw;
 }
 
-#f_right i {
-    margin-left: 1.2vw;
+#f_right a {
+    color: #ffffff75;
+    padding: 0.6vw 0.6vw;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#f_right a:hover {
+    color: #06a77d;
+    text-shadow: 0 0 1vw #ffffff40;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -171,7 +185,7 @@ body {
         margin-top: 8.7px;
     }
     
-    .nav a {
+    .links a {
         border-radius: 6.14px;
         font-size: 20.48px;
         margin-left: 6.14px;
@@ -179,7 +193,7 @@ body {
         padding: 7.17px 10.24px;
     }
     
-    .nav a:hover {
+    .links a:hover {
         border-radius: 6.14px;
     }
     
@@ -202,7 +216,7 @@ body {
         padding: 3.07px 10.24px;
     }
     
-    .subnav a:hover {
+    .sublinks a:hover {
         border-radius: 6.14px;
     }
 
@@ -216,7 +230,8 @@ body {
     }
     
     #f_left {
-        margin-top: -8.19px;
+        margin: -14.34px -6.14px 0;
+        padding: 6.14px 6.14px;
     }
     
     #f_left img {
@@ -224,17 +239,21 @@ body {
     }
     
     #f_center {
-        margin-left: 51.2px;
-        margin-top: 6.14px;
+        margin-left: 54.27px;
+        margin-top: 7.17px;
     }
     
     #f_right {
         font-size: 18.43px;
-        margin-top: 3.07px;
+        margin-top: -1.02px;
     }
     
-    #f_right i {
-        margin-left: 12.29px;
+    #f_right a {
+        padding: 6.14px 6.14px;
+    }
+
+    #f_right a:hover {
+        text-shadow: 0 0 10.24px #ffffff40;
     }
 }
 

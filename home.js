@@ -22,7 +22,10 @@ $(document).ready(function () {
                     anchor_queued = null;
                     click_enabled = true;
                 });
-            } else if (anchor_queued == null && e.target.nodeName != "A") {
+            } else if (navtab_active != null &&
+            anchor_queued == null &&
+            !(e.target.nodeName == "A" ||
+            e.target.nodeName == "IMG")) {
                 $(navtab_active + " a").show().fadeOut(400);
                 $(navtab_active).slideUp(550, function() {
                     navtab_active = null;
