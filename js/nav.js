@@ -1,5 +1,3 @@
-// BEGIN ALL-PAGE JS //
-
 var navtab_active = null;
 var anchor_queued = null;
 var click_enabled = true;
@@ -50,5 +48,3 @@ $(document).ready(function () {
         };
     });
 });
-
-//  END ALL-PAGE JS //

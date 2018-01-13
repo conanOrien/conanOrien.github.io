@@ -1,24 +1,29 @@
-/* BEGIN ALL-PAGE CSS */
+html {
+    background-color: #bac1b8;
+}
 
 body {
-    background-color: #bac1b8;
     margin: 0;
 }
 
 @font-face {
     font-family: 'geometosregular';
-    src: url('fonts/geometos/geometos.eot');
-    src: url('fonts/geometos/geometos.svg#geometosregular') format('svg'),
-         url('fonts/geometos/geometos.ttf') format('ttf'),
-         url('fonts/geometos/geometos.woff') format('woff');
+    src: url('../fonts/geometos/geometos.eot');
+    src: url('../fonts/geometos/geometos.svg#geometosregular') format('svg'),
+         url('../fonts/geometos/geometos.ttf') format('ttf'),
+         url('../fonts/geometos/geometos.woff') format('woff');
 }
 
 @font-face {
     font-family: 'nexalight';
-    src: url('fonts/nexa/nexa_light.eot');
-    src: url('fonts/nexa/nexa_light.svg#nexalight') format('svg'),
-        url('fonts/nexa/nexa_light.ttf') format('ttf'),
-        url('fonts/nexa/nexa_light.woff') format('woff');
+    src: url('../fonts/nexa/nexa_light.eot');
+    src: url('../fonts/nexa/nexa_light.svg#nexalight') format('svg'),
+        url('../fonts/nexa/nexa_light.ttf') format('ttf'),
+        url('../fonts/nexa/nexa_light.woff') format('woff');
+}
+
+.preload {
+    display: none;
 }
 
 .nav {
@@ -243,5 +248,3 @@ body {
         text-shadow: 0 0 10.24px rgba(255, 255, 255, 0.25);
     }
 }
-
-/* END ALL-PAGE CSS */
