@@ -1,9 +1,14 @@
 html {
     background-color: #bac1b8;
+    height: 100%;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0;
+    -webkit-flex-direction: column;
 }
 
 @font-face {
@@ -22,7 +27,7 @@ body {
         url('../fonts/nexa/nexa_light.woff') format('woff');
 }
 
-.preload {
+.wrapper {
     display: none;
 }
 
@@ -32,7 +37,8 @@ body {
     box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
     height: 5.3vw;
     padding: 1.5vw 1.75vw;
-    z-index: 2;
+    position: relative;
+    z-index: 3;
 }
 
 .nav img {
@@ -67,9 +73,12 @@ body {
     box-shadow: 0 0.13vw 0.65vw rgba(0, 0, 0, 0.35);
     display: none;
     height: 2.5vw;
+    left: 0;
     overflow: hidden;
     padding: 0.4vw 1.75vw;
-    z-index: 1;
+    position: absolute;
+    right: 0;
+    z-index: 2;
 }
 
 .navtab span {
@@ -103,10 +112,17 @@ body {
     border-radius: 0.6vw;
 }
 
+.content {
+    flex: 1 0 auto;
+    margin: 4vw 5vw -2.6vw 5vw;
+    -webkit-flex: 1 0 auto;
+    z-index: 0;
+}
+
 .footer {
     background-color: rgba(43, 48, 58, 1);
     border-top: 0.13vw solid rgba(0, 83, 119, 1);
-    bottom: 0;
+    /*bottom: 0;*/
     box-shadow: 0 -0.13vw 0.65vw rgba(0, 0, 0, 0.35);
     color: rgba(255, 255, 255, 0.5);
     font-family: 'nexalight', Arial, sans-serif;
@@ -116,9 +132,10 @@ body {
     left: 0;
     letter-spacing: 0.03vw;
     padding: 1.7vw 2vw;
-    position: absolute;
+    /*position: relative;*/
     right: 0;
     text-align: center;
+    z-index: 1;
 }
 
 #f_left {
@@ -211,6 +228,10 @@ body {
     
     .sublinks a:hover {
         border-radius: 6.14px;
+    }
+
+    .content {
+        margin: 40.96px 51.2px 40.96px 51.2px;
     }
 
     .footer {

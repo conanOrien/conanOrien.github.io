@@ -1,4 +1,5 @@
 $(document).ready(function() {
-    $("#main").load("nav.html").delay("200");
-    $("body").removeClass('.preload').fadeIn("1000");
+    $("#header").load("header.html");
+    $("#footer").load("footer.html").delay("200");
+    $("body").removeClass('.wrapper').fadeIn("1000");
 });
