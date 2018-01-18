@@ -292,11 +292,10 @@ body {
     margin-bottom: 20px;
 }
 
-.alert_h {
+.alert_h, .h1_alt {
     font-family: 'geometosregular', Arial, sans-serif;
     font-size: 3vw;
     margin: 0.5vw 0 0.5vw 0;
-    text-shadow: unset;
 }
 
 .alert_danger, .alert_danger a {
@@ -311,6 +310,24 @@ body {
 b {
     font-family: 'nexabold', Arial, sans-serif;
     font-weight: normal;
+}
+
+.stream_a {
+    display: inline-block;
+    left: 20%;
+    position: relative;
+}
+
+.stream_b {
+    float: right;
+    position: relative;
+    right: 20%;
+}
+
+audio {
+    margin-left: -25%;
+    text-align: left;
+    width: 150%;
 }
 
 /*  END TEMPORARY CSS  */
