@@ -329,7 +329,7 @@ audio {
     width: 150%;
 }
 
-p {
+p, li {
     font-family: 'nexalight', Arial, sans-serif;
     font-size: 1vw;
 }
@@ -338,6 +338,10 @@ p {
     color: rgba(0, 0, 0, 0.50);
     font-style: italic;
     margin: -0.5vw 0 1vw 0;
+}
+
+hr {
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .h2_alt {
@@ -352,6 +356,20 @@ p {
 
 .black {
     color: rgba(0, 0, 0, 1);
+}
+
+.mid {
+    text-align: center;
+}
+
+.h3_alt {
+    color: rgba(0, 0, 0, 0.60);
+    font-family: 'geometosregular', Arial, sans-serif;
+    font-size: 1.7vw;
+    font-variant: small-caps;
+    font-weight: 0;
+    letter-spacing: 0.04vw;
+    margin: 0.4vw 0 0.5vw 0;    
 }
 
 /*  END TEMPORARY CSS  */
