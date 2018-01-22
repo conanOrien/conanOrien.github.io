@@ -1,0 +1,49 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\index.html -f
+RewriteRule ^(.*)$ $1index.html
+
+<Directory css>
+order allow, deny
+deny from all
+</Directory>
+
+<Directory fonts>
+order allow, deny
+deny from all
+</Directory>
+
+<Directory js>
+order allow, deny
+deny from all
+</Directory>
+
+<Files .gitignore>
+order allow, deny
+deny from all
+</Files>
+
+<Files .htaccess>
+order allow, deny
+deny from all
+</Files>
+
+<Files .htaccess>
+order allow, deny
+deny from all
+</Files>
+
+<Files footer.html>
+order allow, deny
+deny from all
+</Files>
+
+<Files header.html>
+order allow, deny
+deny from all
+</Files>
+
+<Files snippets.html>
+order allow, deny
+deny from all
+</Files>
