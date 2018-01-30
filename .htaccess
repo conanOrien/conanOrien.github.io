@@ -1,16 +1,21 @@
-RewriteEngine On
-RewriteBase /
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteRule ^(.*)\/(\?.*)?$ $1$2 [R=301,L]
+    RewriteRule ^(js|css)/ - [L,NC]
 
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+    RewriteCond %{REQUEST_METHOD} !POST
+    RewriteCond %{THE_REQUEST} /index\.html [NC]
+    RewriteCond %{REQUEST_URI} ^(.*/)index\.html$ [NC]
+    RewriteRule ^ %1 [L,R=301,NE]
 
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/ 
-RewriteRule ^index\.html$ http://domain.com/ [R=301,L]
-RewriteCond %{THE_REQUEST} \.html 
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+    RewriteCond %{REQUEST_METHOD} !POST
+    RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,NE,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^([^.]+?)/?$ $1.html [L]
+</IfModule>
 
 ErrorDocument 404 /404/index.html
