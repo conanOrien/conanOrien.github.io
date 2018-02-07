@@ -381,4 +381,9 @@ hr {
     width: 8vw;
 }
 
+.poster p {
+    margin: auto;
+    text-align: center;
+}
+
 /*  END TEMPORARY CSS  */
