@@ -2,7 +2,7 @@
     RewriteEngine On
     RewriteBase /
 
-    RewriteRule ^(js|css)/ - [L,NC]
+    RewriteCond %{REQUEST_URI} !^/(js|css/.*)$
 
     RewriteCond %{REQUEST_METHOD} !POST
     RewriteCond %{THE_REQUEST} /index\.html [NC]
