@@ -338,6 +338,13 @@ p, li {
     margin: -0.5vw 0 1vw 0;
 }
 
+.subsubtext {
+    color: rgba(0, 0, 0, 0.50);
+    font-style: italic;
+    font-size: 0.7vw;
+    margin: -0.5vw 0 1vw 0;
+}
+
 hr {
     background-color: rgba(0, 0, 0, 1);
 }
@@ -370,29 +377,29 @@ hr {
     margin: 0.4vw 0 0.5vw 0;    
 }
 
-.poster {
+.show img {
     display: inline-block;
-    margin-right: 4vw;
-}
-
-.poster img {
-    display: block;
-    margin: auto;
+    vertical-align: middle;
     width: 8vw;
 }
 
-.poster p {
-    margin: auto;
-    text-align: center;
+.show_desc {
+    display: inline-block;
+    margin-left: 2vw;
+    vertical-align: middle;
 }
 
-.logo {
-    display: block;
-    filter: invert(100%);
-    margin-bottom: 3vw;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20vw;
+.all_inline {
+    margin-bottom: 0.5vw;
+}
+
+.all_inline * {
+    display: inline;
+}
+
+.pfix {
+    display: table-caption;
+    width: 60vw;
 }
 
 /*  END TEMPORARY CSS  */
