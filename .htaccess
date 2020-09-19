@@ -3,4 +3,8 @@
     RewriteRule ^(.*)/$ /$1 [L,R=301]
 </IfModule>
 
+RewriteEngine On
+RewriteCond %{HTTPS} on
+RewriteRule (.*) http://stream.njit.edu:8000/stream1.mp3 [R=301,L]
+
 ErrorDocument 404 /404/index.html
